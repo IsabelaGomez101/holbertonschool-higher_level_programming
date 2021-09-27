@@ -7,10 +7,11 @@ def safe_print_list_integers(my_list=[], x=0):
             try:
                 if aux < x:
                     print("{:d}".format(my_list[aux]), end="")
-                    len += 1
+                    len_print += 1
                     aux += 1
                 else:
                     print("")
                     return len_print
             except (ValueError, TypeError, IndexError):
+                pass
                 aux += 1
