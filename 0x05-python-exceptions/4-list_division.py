@@ -4,21 +4,18 @@
 def list_division(my_list_1, my_list_2, list_length):
     new_list = []
     count = 0
-    while True:
+    for i in range(0, list_length):
         try:
-            for i in range(count, list_length):
-                new_list += [my_list_1[i]/my_list_2[i]]
-                count += 1
-            return new_list
+            tmp = my_list_1[i]/my_list_2[i]
         except ZeroDivisionError:
-            new_list += [0]
-            count += 1
+            tmp = 0
             print("division by 0")
         except TypeError:
-            new_list += [0]
-            count += 1
+            tmp = 0
             print("wrong type")
         except IndexError:
-            new_list += [0]
-            count += 1
+            tmp = 0
             print("out of range")
+        finally:
+            new_list += [tmp]
+    return new_list
