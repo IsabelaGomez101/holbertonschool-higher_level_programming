@@ -2,5 +2,4 @@
 
 
 class Square:
-    def __init__(self):
-        self.__dict__ = {}
+    __dict__ = {}
