@@ -2,4 +2,4 @@
 
 
 class Square:
-    __dict__ = {}
+    pass
