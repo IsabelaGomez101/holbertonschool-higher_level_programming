@@ -5,16 +5,12 @@
 class Square:
     """Private instance attribute size"""
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
         return self.__size
-
-    @property
-    def position(self):
-        return self.__position
 
     @size.setter
     def size(self, size):
@@ -25,6 +21,10 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+
+    @property
+    def position(self):
+        return self.__position
 
     @position.setter
     def position(self, position):
@@ -49,5 +49,5 @@ class Square:
                 print("\n" * self.__position[1], end="")
             for i in range(0, self.__size):
                 if self.__position[0] > 0 or self.__position[1] <= 0:
-                    print("_" * self.__position[0], end="")
+                    print(" " * self.__position[0], end="")
                     print("#" * self.__size)
