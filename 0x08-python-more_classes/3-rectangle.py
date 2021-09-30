@@ -53,4 +53,3 @@ class Rectangle:
             string = string * (self.__height - 1)
             string = string + ("#" * self.__width)
             return string
-        
