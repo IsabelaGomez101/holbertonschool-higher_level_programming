@@ -50,13 +50,12 @@ class Rectangle:
             return (self.__width*2)+(self.__height*2)
 
     def __str__(self) -> str:
-        symbol = Rectangle.print_symbol
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
-            string = (symbol * self.__width) + "\n"
+            string = (str(self.print_symbol) * self.__width) + "\n"
             string = string * (self.__height - 1)
-            string = string + (symbol * self.__width)
+            string = string + (str(self.print_symbol) * self.__width)
             return string
 
     def __repr__(self) -> str:
