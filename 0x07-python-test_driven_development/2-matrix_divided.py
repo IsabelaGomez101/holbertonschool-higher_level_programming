@@ -1,8 +1,6 @@
 #!/usr/bin/python
 """
 This is module 2-matrix_divided
-function that divides all elements of a matrix.
-matrix must be a list of lists of integers or floats.
 """
 
 
