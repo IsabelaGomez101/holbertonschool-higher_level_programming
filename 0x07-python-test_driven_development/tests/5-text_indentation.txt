@@ -1,0 +1,53 @@
+==============================
+How to Use 5-text_identation.py
+==============================
+
+`` text_indentation(text) `` function that prints 
+a text with 2 new lines after each of these characters: . ? and :
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Tests
+=====
+
+text must be a string
+
+::
+
+>>> text_indentation("Try it again. Fail again: Fail better")
+Try it again.
+<BLANKLINE>
+Fail again:
+<BLANKLINE>
+Fail better
+
+::
+
+>>> text_indentation(["hello", "world"])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+::
+
+>>> text_indentation(34.5)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+::
+
+There should be no space at the beginning 
+or at the end of each printed line
+
+::
+
+>>> text_indentation("      hello.    Who     are you?    ")
+hello.
+<BLANKLINE>
+Who are you?
+<BLANKLINE>
+
+::
+
+
