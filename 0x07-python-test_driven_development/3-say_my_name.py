@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 This is module 3-say_my_name
 function that prints My name is <first name> <last name>

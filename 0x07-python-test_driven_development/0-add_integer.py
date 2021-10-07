@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 This is module 0-add_integer
 function that adds 2 integers.
