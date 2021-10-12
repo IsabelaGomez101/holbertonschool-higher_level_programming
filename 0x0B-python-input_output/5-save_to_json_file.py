@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" function save_to_json_string """
+""" function save_to_json_file """
 
 
 def save_to_json_file(my_obj, filename):
