@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" class is_kind_of_class """
+""" function is_kind_of_class """
 
 
 def is_kind_of_class(obj, a_class):
