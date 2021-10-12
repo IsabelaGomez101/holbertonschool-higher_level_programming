@@ -15,17 +15,24 @@ Public instance method ``print_sorted(self) `` prints the list, but sorted
 >>> first_list.print_sorted()
 [4, 4, 7, 10]
 
+>>> first_list = MyList()
+>>> first_list.append(0)
+>>> print(first_list)
+[0]
+>>> first_list.print_sorted()
+[0]
+
 passing negative numbers
 
 >>> first_list = MyList()
 >>> first_list.append(-4)
->>> first_list.append(10)
->>> first_list.append(4)
+>>> first_list.append(-10)
+>>> first_list.append(-7)
 >>> first_list.append(-1)
 >>> print(first_list)
-[-4, 10, 7, -1]
+[-4, -10, -7, -1]
 >>> first_list.print_sorted()
-[-4, -1, 7, 10]
+[-10, -7, -4, -1]
 
 empty list
 
@@ -34,3 +41,14 @@ empty list
 []
 >>> first_list.print_sorted()
 []
+
+>>> first_list = MyList()
+>>> first_list.append()
+Traceback (most recent call last):
+...
+TypeError: append() takes exactly one argument (0 given)
+
+>>> first_list.append(Null)
+Traceback (most recent call last):
+...
+NameError: name 'Null' is not defined
