@@ -1,0 +1,36 @@
+==============================
+How to Use 1-my_list.py
+==============================
+
+Public instance method ``print_sorted(self) `` prints the list, but sorted
+
+>>> MyList = __import__('1-my_list').MyList
+>>> first_list = MyList()
+>>> first_list.append(4)
+>>> first_list.append(10)
+>>> first_list.append(4)
+>>> first_list.append(7)
+>>> print(first_list)
+[4, 10, 4, 7]
+>>> first_list.print_sorted()
+[4, 4, 7, 10]
+
+passing negative numbers
+
+>>> first_list = MyList()
+>>> first_list.append(-4)
+>>> first_list.append(10)
+>>> first_list.append(4)
+>>> first_list.append(-1)
+>>> print(first_list)
+[-4, 10, 7, -1]
+>>> first_list.print_sorted()
+[-4, -1, 7, 10]
+
+empty list
+
+>>> first_list = MyList()
+>>> print(first_list)
+[]
+>>> first_list.print_sorted()
+[]
