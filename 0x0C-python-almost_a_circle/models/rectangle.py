@@ -83,6 +83,7 @@ class Rectangle(Base):
         print(string)
 
     def __str__(self):
-        string = str(self.id) + " " + str(self.__x) + "/" + str(self.__y)
+        string = "(" + str(self.id) + ")"
+        string = string + " " + str(self.__x) + "/" + str(self.__y)
         string = string + " " + str(self.__width) + "/" + str(self.__height)
         return("[Rectangle] {}".format(string))
