@@ -9,6 +9,11 @@ from models.rectangle import Rectangle
 class TestBase(unittest.TestCase):
     def test_docstrings(self):
         self.assertIs(hasattr(Rectangle, "__init__"), True)
+        self.assertIs(hasattr(Rectangle, "update"), True)
+        self.assertIs(hasattr(Rectangle, "area"), True)
+        self.assertIs(hasattr(Rectangle, "display"), True)
+        self.assertIs(hasattr(Rectangle, "__str__"), True)
+        self.assertIs(hasattr(Rectangle, "to_dictionary"), True)
 
     def test_rectangle(self):
         Base._Base__nb_objects = 0
