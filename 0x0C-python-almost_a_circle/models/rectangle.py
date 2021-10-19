@@ -70,6 +70,13 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    def update(self, *args):
+        """ that assigns an argument to each attribute"""
+        list_attrib = ['id', '_Rectangle__width', '_Rectangle__height',
+                       '_Rectangle__x', '_Rectangle__y']
+        for i in range(0, len(args)):
+            self.__dict__[list_attrib[i]] = args[i]
+
     def area(self):
         """returns the area value of the Rectangle instance"""
         return self.__width * self.__height
