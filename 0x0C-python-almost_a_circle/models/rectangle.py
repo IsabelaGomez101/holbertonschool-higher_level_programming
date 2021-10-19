@@ -74,8 +74,9 @@ class Rectangle(Base):
         """that assigns a key/value argument to attributes"""
         list_attrib = ['id', '_Rectangle__width', '_Rectangle__height',
                        '_Rectangle__x', '_Rectangle__y']
-        my_dict = {'id':'id', 'width':'_Rectangle__width', 'height':'_Rectangle__height',
-                    'x':'_Rectangle__x', 'y':'_Rectangle__y'}
+        my_dict = {'id': 'id', 'width': '_Rectangle__width',
+                   'height': '_Rectangle__height', 'x': '_Rectangle__x',
+                   'y': '_Rectangle__y'}
         for i in range(0, len(args)):
             self.__dict__[list_attrib[i]] = args[i]
         if len(args) == 0:
