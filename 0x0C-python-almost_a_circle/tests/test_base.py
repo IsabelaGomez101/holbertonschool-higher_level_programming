@@ -10,6 +10,7 @@ from models.square import Square
 class TestBase(unittest.TestCase):
     def test_docstrings(self):
         self.assertIs(hasattr(Base, "__init__"), True)
+        self.assertIs(hasattr(Base, "to_json_string"), True)
 
     def test_to_json_string(self):
         self.assertAlmostEqual(Base.to_json_string(None), "[]")
