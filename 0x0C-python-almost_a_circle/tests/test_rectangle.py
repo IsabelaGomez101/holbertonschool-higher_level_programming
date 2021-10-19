@@ -14,6 +14,7 @@ class TestBase(unittest.TestCase):
         self.assertIs(hasattr(Rectangle, "display"), True)
         self.assertIs(hasattr(Rectangle, "__str__"), True)
         self.assertIs(hasattr(Rectangle, "to_dictionary"), True)
+        self.assertIs(hasattr(Rectangle, "width"), True)
 
     def test_rectangle(self):
         Base._Base__nb_objects = 0
