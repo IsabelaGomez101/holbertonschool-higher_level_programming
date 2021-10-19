@@ -10,8 +10,11 @@ from models.square import Square
 class TestBase(unittest.TestCase):
     def test_docstrings(self):
         self.assertIs(hasattr(Base, "__init__"), True)
-        self.assertIs(hasattr(Base, "to_json_string"), True)
-        self.assertIs(hasattr(Base, "save_to_file"), True)
+
+    def test_to_json_string(self):
+        self.assertAlmostEqual(Base.to_json_string(None), "[]")
+        self.assertAlmostEqual(Base.to_json_string([]), "[]")
+        self.assertAlmostEqual(Base.to_json_string({'x': 2, 'width': 10}), '{"width": 10, "x": 2}')
 
     def test_id(self):
         Base._Base__nb_objects = 0
