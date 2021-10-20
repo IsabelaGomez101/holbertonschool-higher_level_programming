@@ -16,9 +16,13 @@ class TestBase(unittest.TestCase):
         self.assertIs(hasattr(Rectangle, "to_dictionary"), True)
 
     def test_rectangle(self):
-        self.assertIsInstance(Rectangle(2, 4), Rectangle)
-        self.assertIsInstance(Rectangle(4, 5, 7), Rectangle)
-        self.assertIsInstance(Rectangle(2, 4, 6, 7), Rectangle)
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(1, 2)
+        r2 = Rectangle(1, 2, 3)
+        r3 = Rectangle(1, 2, 3, 4)
+        self.assertAlmostEqual(r1.id, 1)
+        self.assertAlmostEqual(r2.id, 2)
+        self.assertAlmostEqual(r3.id, 3)
 
     def test_validate_attribute(self):
         self.assertRaises(TypeError, Rectangle, ("2", 10))
