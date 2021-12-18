@@ -16,7 +16,7 @@ if __name__ == '__main__':
     searched = argv[4]
     cursor = connect_db.cursor()
     cursor.execute(
-        "SELECT * FROM states WHERE name='{}'\
+        "SELECT states.id, states.name FROM states WHERE name='{}'\
         ORDER BY states.id ASC".format(searched))
     data = cursor.fetchall()
 
