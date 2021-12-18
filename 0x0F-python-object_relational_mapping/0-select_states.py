@@ -14,8 +14,7 @@ if __name__ == '__main__':
     cursor = connect_db.cursor()
     cursor.execute('SELECT * FROM states ORDER BY states.id ASC')
     data = cursor.fetchall()
-
     for state in data:
         print(state)
-
+    cursor.close()
     connect_db.close()
