@@ -9,12 +9,12 @@ request(url, function (error, response, body) {
     console.error('error:', error);
   } else {
     const body_ = JSON.parse(body);
-    const result = body_['results'];
+    const result = body_.results;
     let nmovies = 0;
     let i;
     let j;
     for (i = 0; i < result.length; i++) {
-      const c = (result[i]['characters']);
+      const c = (result[i].characters);
       for (j = 0; j < c.length; j++) {
         const id = c[j].endsWith('18/');
         if (id) {
